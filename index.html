@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First AR App</title>
+    <!-- This loads A-Frame (the 3D library) -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- This loads AR.js (the AR tracking library) -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin:0; overflow:hidden;">
+    <!-- a-scene is like the <body> of your 3D world -->
+    <!-- embedded and arjs are AR.js settings -->
+    <a-scene embedded arjs>
+
+      <!-- a-marker watches for the Hiro marker via camera -->
+      <a-marker preset="hiro">
+
+        <!-- When marker is found, show a red box above it -->
+        <!-- position="0 0.5 0" means: center, slightly above, center -->
+        <a-box position="0 0.5 0" color="red"></a-box>
+
+      </a-marker>
+
+      <!-- This is the camera (your phone's camera) -->
+      <a-entity camera></a-entity>
+
+    </a-scene>
+  </body>
+</html>
